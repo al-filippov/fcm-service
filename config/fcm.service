@@ -1,0 +1,15 @@
+[Unit]
+Description=FCM Service
+
+[Service]
+Type=forking
+WorkingDirectory=/opt/fcm
+ExecStart=/opt/fcm/fcm
+ExecStop=/bin/kill -TERM $MAINPID
+Restart=always
+
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

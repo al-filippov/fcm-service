@@ -1,0 +1,2 @@
+#!/bin/sh
+java -jar ./fcm-service.jar > /var/log/fcm-$(date +%Y-%m-%d-%H-%M-%S).log &
